@@ -1,0 +1,13 @@
+server:
+  port: 8181
+#数据库配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dongms-test?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml
+  typeAliasesPackage: com.dongms.myspringboot
