@@ -8,4 +8,73 @@
         select id,name from user;
     </select>
 
+<!--    <select id="findAllStu" resultType="com.dongms.myspringboot.entity.StudentEntity">-->
+<!--        select-->
+<!--        *-->
+<!--        from(-->
+<!--        select-->
+<!--        t.*,t_bzks.XM, ROWNUM AS rowno-->
+<!--        from-->
+<!--        (-->
+<!--        select-->
+<!--        t.XGH,-->
+<!--        count(t.wid) as count,-->
+<!--        max(t2.sumJe) sum-->
+<!--        from T_YKT_GRJY t-->
+<!--        left join (-->
+<!--        select t2.XGH,sum(t2.JYJE) sumJe from T_YKT_GRJY t2 where t2.JYFXDM =1 group by t2.XGH-->
+<!--        )  t2 on t.XGH = t2.XGH-->
+<!--        where t.JYRQ > '2020-01'-->
+<!--        group by t.XGH-->
+<!--        )t-->
+<!--        left join T_BZKS t_bzks on t.XGH = t_bzks.XH-->
+<!--        where ROWNUM  <![CDATA[ <=  ]]> 200-->
+<!--        )t3-->
+<!--        where t3.rowno  <![CDATA[ >=  ]]>100-->
+<!--    </select>-->
+
+<!--    <select id="findAllStu" resultType="com.dongms.myspringboot.entity.StudentEntity">-->
+<!--        select-->
+<!--        t.*,t_bzks.XM-->
+<!--        from-->
+<!--        (-->
+<!--        select-->
+<!--        t.XGH,-->
+<!--        count(t.wid) as count,-->
+<!--        max(t2.sumJe) sum-->
+<!--        from T_YKT_GRJY t-->
+<!--        left join (-->
+<!--        select t2.XGH,sum(t2.JYJE) sumJe from T_YKT_GRJY t2 where t2.JYFXDM =1 group by t2.XGH-->
+<!--        )  t2 on t.XGH = t2.XGH-->
+<!--        where t.JYRQ > '2020-01'-->
+<!--        group by t.XGH-->
+<!--        )t-->
+<!--        left join T_BZKS t_bzks on t.XGH = t_bzks.XH-->
+<!--    </select>-->
+
+    <select id="findAllStu" resultType="com.dongms.myspringboot.entity.StudentEntity">
+        select
+            t2.wid,
+            t1.xh,
+            t1.xm,
+            t1.xbdm,
+            t2.jylsh,
+            t2.zh,
+            t2.kh,
+            t2.jyfxdm,
+            t2.shdm,
+            t2.jyje,
+            t2.jyye,
+            t2.jysj,
+            t2.jyrq
+        from T_YKT_GRJY t2
+        left join T_BZKS t1 on t1.XH = t2.XGH
+    </select>
+
+
+
+
+
+
+
 </mapper>

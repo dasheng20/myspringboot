@@ -4,11 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <!--以下已经在application.yml中配置过了-->
-    <!--<typeAliases>-->
-    <!--<package name="com.example.domain"/>-->
-    <!--</typeAliases>-->
-    <!--<mappers>-->
-    <!--<mapper resource="mapper/UserMapper.xml"/>-->
-    <!--</mappers>-->
+<!--    <typeAliases>-->
+<!--    <package name="com.example.domain"/>-->
+<!--    </typeAliases>-->
+<!--    <mappers>-->
+<!--    <mapper resource="mapper/UserMapper.xml"/>-->
+<!--    </mappers>-->
 </configuration>
 

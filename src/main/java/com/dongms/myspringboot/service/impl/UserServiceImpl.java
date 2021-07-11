@@ -1,5 +1,6 @@
 package com.dongms.myspringboot.service.impl;
 
+import com.dongms.myspringboot.entity.StudentEntity;
 import com.dongms.myspringboot.entity.UserEntity;
 import com.dongms.myspringboot.mapper.UserMapper;
 import com.dongms.myspringboot.service.UserService;
@@ -17,5 +18,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserEntity> findAllUser() {
         return mapper.findAllUser();
+    }
+
+    @Override
+    public List<StudentEntity> findAllStu() {
+        return mapper.findAllStu();
     }
 }
