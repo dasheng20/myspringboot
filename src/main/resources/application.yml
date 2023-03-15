@@ -6,8 +6,12 @@ spring:
     url: jdbc:mysql://localhost:3306/dongms-test?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
     username: root
     password: 123456
+#    url: jdbc:oracle:thin:@192.168.182.100:1521:CDSP
+#    username: c##usr_ysj
+#    password: wisedu
 
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   config-location: classpath:mybatis-config.xml
   typeAliasesPackage: com.dongms.myspringboot
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
