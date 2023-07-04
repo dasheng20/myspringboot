@@ -18,7 +18,11 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/findUser")
-    public List<UserEntity> findUser(){
-        return userService.findAllUser();
+    public Result findUser(){
+        Result result = new Result();
+        result.setData(userService.findAllUser());
+        result.setCode("200");
+        result.setMsg("success");
+        return result ;
     }
 }
