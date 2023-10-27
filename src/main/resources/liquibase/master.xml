@@ -13,4 +13,14 @@
 
     <includeAll path="liquibase/changelog/" relativeToChangelogFile="false"/>
 
+
+    <changeSet id="dong1" author="dong" runOnChange="true">
+        <loadUpdateData encoding="UTF-8"
+                        file="classpath:liquibase/changelog/dh_project_category1.csv"
+                        tableName="dh_project_category1"
+                        primaryKey="id"
+                        quotchar="&quot;"
+                        separator=","></loadUpdateData>
+    </changeSet>
+
 </databaseChangeLog>

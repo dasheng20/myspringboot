@@ -2,6 +2,7 @@ package com.dongms.myspringboot.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.sql.*;
 
@@ -18,8 +19,14 @@ import java.sql.*;
  * @Author: dongms
  * @Date: 2022/11/14
  */
+@RestController
 @RequestMapping("/test")
 public class TestController {
+
+    @RequestMapping("/test")
+    public String printTest(){
+        return "123121212";
+    }
 
     @RequestMapping("/mysql")
     @ResponseBody
